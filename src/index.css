@@ -46,6 +46,7 @@ button:focus {
   max-width: 200px;
   margin: 0 auto;
   background-color: rgb(121, 37, 181);
+  color: white;
   margin-top: 30px;
 }
 

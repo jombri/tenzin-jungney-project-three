@@ -2,7 +2,15 @@ function Baller({baller}) {
     return (
         baller ? (
             <div className="results">
-                <p className="baller">{baller[28].first_name}</p>
+                <ul>
+                    {
+                        baller.map(eachBaller => {
+                            return (
+                                <li key={eachBaller.id} className="baller">{eachBaller.first_name} {eachBaller.last_name}</li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         ) : <p className="placeholder">Search your baller!</p>
     )
