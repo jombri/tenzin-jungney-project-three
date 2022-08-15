@@ -5,11 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/hoop-court.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1240px;
+  /* background-color: crimson; */
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 form {
@@ -21,38 +38,75 @@ form {
 }
 
 input[type="text"] {
-  background: linear-gradient(350deg, rgba(255, 238, 21, 0.6) 0%, rgba(242, 69, 42, 0.6) 100%);
-  padding: 13px 15px;
+  padding: 10px 15px;
   margin: 0 20px 0 12px;
   max-width: 200px;
-
+  color: black;
+  /* font-size: 20px; */
 }
 
 button {
   cursor: pointer;
   transition: 0.3s;
   padding: 10px 15px;
-  border: 3px solid white;
+  color: white;
+  background-color: blue;
+  border: none;
+  /* border: 3px solid white; */
 }
 
 button:hover,
 button:focus {
-  background: white;
-  color: black;
+  background: rgba(blue, alpha(0.5));
+  color: white;
 }
 
-.baller {
+.headerStyle {
+  padding: 50px 0;
+  color: black;
+  font-size: 50px;
+  background-color: crimson;
+}
+
+.resultDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.resultDisplay span {
+  padding: 5px 10px;
+}
+.resultDisplay li {
+  list-style: none;
+}
+
+.ballerProfile {
   padding: 20px 15px;
   max-width: 200px;
   margin: 0 auto;
-  background-color: rgb(121, 37, 181);
-  color: white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgb(23, 64, 139) 0%, rgb(255, 255, 255) 50%, rgb(201, 8, 42) 100%);
+  /* background-color: rgb(121, 37, 181); */
+  color: black;
   margin-top: 30px;
+  width: calc(20% - 5px);
 }
 
 .placeholder {
-  background-color: rgb(219, 90, 20);
+  background-color: rgb(210, 232, 12);
+  color: black;
   padding: 20px 15px;
   max-width: 350px;
   margin: 40px auto;
+}
+
+.footer {
+  padding: 20px 0;
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

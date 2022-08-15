@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import Baller from './Baller.js';
 import Form from './Form.js';
+import Table from './Table.js';
+import Footer from './Footer.js';
 
 function App() {
   const [player, setPlayer] = useState(''); 
@@ -29,23 +31,25 @@ function App() {
     } catch(error) {
       // what to do if there is an error...
       setFormError(true);
-
     } 
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchPlayer();
+
   }
 
   const handleChange = (e) => {
     setBallerInput(e.target.value)
   }
 
+  // const colNames = ['Id', 'First Name', 'Last Name', 'Position', 'Team']
+
 
   return (
-    <div className="App">
-      <header> ballers </header>
+    <div className='wrapper'>
+      <header className='headerStyle'> Look up your NBA Baller info. </header>
       
       <Form 
         handleSubmit={handleSubmit}
@@ -55,6 +59,8 @@ function App() {
       />
 
       <Baller baller={player} />
+      {/* <Table baller={player} /> */}
+      <Footer />
 
     </div>
   );
