@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Baller from './Baller.js';
 import Form from './Form.js';
-import Table from './Table.js';
+// import Table from './Table.js';
 import Footer from './Footer.js';
 
 function App() {
@@ -25,11 +25,10 @@ function App() {
 
       console.log(apiData.data);
       setPlayer(apiData.data);
-      // console.log(apiData.data.data.last_name);
       setFormError(false);
 
     } catch(error) {
-      // what to do if there is an error...
+      // if error occurs
       setFormError(true);
     } 
   }
@@ -37,6 +36,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchPlayer();
+    // if ballerInput is empty, throw an error
+    // else { call fetchPlayer }
 
   }
 
