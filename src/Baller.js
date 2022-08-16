@@ -1,21 +1,18 @@
 function Baller({baller}) {
     return (
         baller ? (
-            // <div className="resultDisplay">
                 <ul className="resultDisplay">
                     {
                         baller.map(eachBaller => {
                             return (
                                 <li key={eachBaller.id} className="ballerProfile">
-                                    <span>{eachBaller.first_name} {eachBaller.last_name}</span> 
-                                    {/* <span>{eachBaller.last_name}</span>  */}
+                                    <span>{eachBaller.first_name} {eachBaller.last_name}</span>
                                     <span>({eachBaller.team.full_name})</span> 
                                 </li>
                             )
                         })
                     }
                 </ul>
-            // </div>
         ) : <p className="placeholder">Search your baller!</p>
     )
 }

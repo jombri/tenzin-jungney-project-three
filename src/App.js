@@ -3,7 +3,6 @@ import './App.css';
 import { useState } from 'react';
 import Baller from './Baller.js';
 import Form from './Form.js';
-// import Table from './Table.js';
 import Footer from './Footer.js';
 
 function App() {
@@ -18,29 +17,26 @@ function App() {
       per_page: 100
     });
 
-    try {
-
       const response = await fetch(url);
       const apiData = await response.json();
 
       console.log(apiData.data);
       const playersResult = apiData.data;
-      setPlayer(playersResult);
-      setFormError(false);
-
-    } catch(error) {
-      // if error occurs
-      setFormError(true);
-    } 
+      if (playersResult.length === 0) {
+        setFormError(true)
+      } else {
+        setPlayer(playersResult);
+        setFormError(false);
+      }
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if ballerInput is empty, throw an error, else call fetchPlayer 
+    // if ballerInput is true, run fetchPlayer, else throw error
     if (ballerInput) {
       fetchPlayer();
     } else {
-      <p>enter a player</p>
+      <p>Error: enter a player</p>
     }
     setBallerInput('');
 
@@ -49,8 +45,6 @@ function App() {
   const handleChange = (e) => {
     setBallerInput(e.target.value)
   }
-
-  // const colNames = ['Id', 'First Name', 'Last Name', 'Position', 'Team']
 
 
   return (
@@ -65,7 +59,6 @@ function App() {
       />
 
       <Baller baller={player} />
-      {/* <Table baller={player} /> */}
       <Footer />
 
     </div>
