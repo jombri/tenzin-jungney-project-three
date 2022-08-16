@@ -3,7 +3,7 @@ function Form({ handleSubmit, handleChange, ballerInput, formError}) {
         <>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="baller" className="sr-only">enter a player</label>
-                <input type="text" id="baller" onChange={handleChange} value={ballerInput} placeholder="enter a player name..."/>
+                <input type="text" id="baller" onChange={handleChange} value={ballerInput} placeholder="enter a player's name..."/>
 
                 <button>Enter</button>
                 { formError ? <h2>please try a different baller</h2> : null }

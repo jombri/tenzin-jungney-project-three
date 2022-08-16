@@ -47,7 +47,7 @@ form {
 input[type="text"] {
   padding: 10px 15px;
   margin: 0 20px 0 12px;
-  max-width: 200px;
+  width: 50%;
   color: black;
   /* font-size: 20px; */
 }
@@ -75,12 +75,12 @@ button:focus {
   background-color: crimson;
 }
 
-.resultDisplay {
+/* .resultDisplay {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto 50px;
-}
+} */
 .resultDisplay span {
   padding: 5px 10px;
 }
@@ -88,9 +88,30 @@ button:focus {
   list-style: none;
 }
 
-.ballerProfile {
+/* .ballerProfile {
   padding: 20px 15px;
   max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgb(23, 64, 139) 0%, rgb(255, 255, 255) 50%, rgb(201, 8, 42) 100%);
+  color: black;
+  margin-top: 30px;
+  min-width: calc(20% - 5px);
+} */
+
+.resultDisplay {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* justify-content: center; */
+  
+  /* margin: 0 auto 50px; */
+}
+
+.ballerProfile {
+  padding: 20px 15px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -98,7 +119,9 @@ button:focus {
   /* background-color: rgb(121, 37, 181); */
   color: black;
   margin-top: 30px;
-  min-width: calc(20% - 5px);
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  /* min-width: calc(20% - 5px); */
 }
 
 .placeholder {

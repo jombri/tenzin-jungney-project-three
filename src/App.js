@@ -24,7 +24,8 @@ function App() {
       const apiData = await response.json();
 
       console.log(apiData.data);
-      setPlayer(apiData.data);
+      const playersResult = apiData.data;
+      setPlayer(playersResult);
       setFormError(false);
 
     } catch(error) {
@@ -35,9 +36,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchPlayer();
-    // if ballerInput is empty, throw an error
-    // else { call fetchPlayer }
+    // if ballerInput is empty, throw an error, else call fetchPlayer 
+    if (ballerInput) {
+      fetchPlayer();
+    } else {
+      <p>enter a player</p>
+    }
+    setBallerInput('');
 
   }
 
