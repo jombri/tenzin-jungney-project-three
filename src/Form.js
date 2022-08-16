@@ -6,7 +6,7 @@ function Form({ handleSubmit, handleChange, ballerInput, formError}) {
                 <input type="text" id="baller" onChange={handleChange} value={ballerInput} placeholder="enter a player's name..."/>
 
                 <button>Enter</button>
-                { formError ? <h2>please try a different baller</h2> : null }
+                { formError ? <h2 className="alertBox">please try a different baller</h2> : null }
             </form>
             <p className="apiLink">Powered by 
                 <span> <a href="https://www.balldontlie.io">balldontlie</a>  </span>

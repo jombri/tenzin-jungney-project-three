@@ -47,7 +47,6 @@ input[type="text"] {
   margin: 0 20px 0 12px;
   width: 50%;
   color: black;
-  /* font-size: 20px; */
 }
 
 button {
@@ -57,7 +56,6 @@ button {
   color: white;
   background-color: blue;
   border: none;
-  /* border: 3px solid white; */
 }
 
 button:hover,
@@ -66,11 +64,22 @@ button:focus {
   color: white;
 }
 
+.alertBox {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
 .headerStyle {
   padding: 50px 0;
   color: white;
   font-size: 50px;
   background-color: crimson;
+}
+.headerInfo {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 .resultDisplay span {
@@ -84,25 +93,22 @@ button:focus {
 .resultDisplay {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* justify-content: center; */
-  
-  /* margin: 0 auto 50px; */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
 }
 
 .ballerProfile {
   padding: 20px 15px;
   width: 100%;
   margin: 0 auto;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   background: linear-gradient(90deg, rgb(23, 64, 139) 0%, rgb(255, 255, 255) 50%, rgb(201, 8, 42) 100%);
-  /* background-color: rgb(121, 37, 181); */
   color: black;
   margin-top: 30px;
   border-radius: 5px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  /* min-width: calc(20% - 5px); */
 }
 
 .placeholder {
@@ -116,8 +122,6 @@ button:focus {
 .footer {
   padding: 20px 0;
   font-size: 25px;
-  /* position: absolute; */
-  /* bottom: 0; */
   width: 100%;
   text-align: center;
   margin-top: auto;
@@ -126,9 +130,22 @@ button:focus {
 
 .apiLink {
   font-size: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
+  max-width: max-content;
+  margin: auto;
+  background-color: black;
+  padding: 10px 20px;
 }
 .apiLink a {
   font-style: italic;
   color: inherit;
+}
+
+@media (max-width: 685px) {
+  .headerStyle {
+    font-size: 30px;
+  }
+  .footer {
+    font-size: 16px;
+  }
 }

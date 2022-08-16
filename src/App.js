@@ -1,6 +1,6 @@
 import './App.css';
-// import axios from 'axios';
 import { useState } from 'react';
+import Header from './Header.js';
 import Baller from './Baller.js';
 import Form from './Form.js';
 import Footer from './Footer.js';
@@ -34,7 +34,7 @@ function App() {
     e.preventDefault();
     // if ballerInput is true, run fetchPlayer, else throw error
     if (ballerInput) {
-      fetchPlayer();
+      fetchPlayer(ballerInput);
     } else {
       <p>Error: enter a player</p>
     }
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <header className='headerStyle'> Look up your NBA Baller info. </header>
+      <Header />
       
       <Form 
         handleSubmit={handleSubmit}
