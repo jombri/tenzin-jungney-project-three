@@ -20,7 +20,7 @@ function App() {
       const response = await fetch(url);
       const apiData = await response.json();
 
-      console.log(apiData.data);
+      // console.log(apiData.data);
       const playersResult = apiData.data;
       if (playersResult.length === 0) {
         setFormError(true)
