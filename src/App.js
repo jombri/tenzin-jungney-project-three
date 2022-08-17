@@ -60,6 +60,7 @@ function App() {
       <Baller baller={player} />
       <Footer />
 
+
     </div>
   );
 }
