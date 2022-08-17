@@ -7,7 +7,7 @@ function Baller({baller}) {
                             return (
                                 <li key={eachBaller.id} className="ballerProfile">
                                     <span>{eachBaller.first_name} {eachBaller.last_name}</span>
-                                    <span>({eachBaller.team.full_name})</span> 
+                                    <span>{eachBaller.team.full_name}</span> 
                                 </li>
                             )
                         })
