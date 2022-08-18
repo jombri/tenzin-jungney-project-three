@@ -35,7 +35,7 @@ function App() {
     if (ballerInput) {
       fetchPlayer(ballerInput);
     } else {
-      <p>Error: enter a player</p>
+      setFormError(true);
     }
     setBallerInput('');
 

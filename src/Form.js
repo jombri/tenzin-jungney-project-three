@@ -9,7 +9,7 @@ function Form({ handleSubmit, handleChange, ballerInput, formError}) {
                 { formError ? <h2 className="alertBox">please try a different baller</h2> : null }
             </form>
             <p className="apiLink">Powered by 
-                <span> <a href="https://www.balldontlie.io">balldontlie API</a>  </span>
+                <span> <a href="https://www.balldontlie.io" target="_blank" rel="noopener noreferrer">balldontlie API</a>  </span>
             </p>
         </>
     )

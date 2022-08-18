@@ -95,6 +95,9 @@ button:focus {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
 }
 
 .ballerProfile {
@@ -114,7 +117,7 @@ button:focus {
 .placeholder {
   background-color: rgb(210, 232, 12);
   color: black;
-  padding: 20px 15px;
+  padding: 15px;
   max-width: 350px;
   margin: 40px auto;
 }
@@ -136,9 +139,13 @@ button:focus {
   background-color: black;
   padding: 10px 20px;
 }
-.apiLink a {
-  font-style: italic;
+
+a {
+  text-decoration: none;
   color: inherit;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 685px) {
